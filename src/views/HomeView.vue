@@ -1,4 +1,5 @@
 <script setup>
+import dayjs from 'dayjs'
 import { getCurrentInstance, ref } from 'vue';
 const { proxy } = getCurrentInstance();
 const value = ref('3');
@@ -11,6 +12,7 @@ function showMe() {
 
 <template>
   <main>
+    <div>{{ dayjs().format('YYYY-MM-DD') }}</div>
     <div>123</div>
     <van-button type="primary" @click="showMe">主要按钮</van-button>
   </main>
